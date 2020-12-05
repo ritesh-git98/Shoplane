@@ -7,7 +7,7 @@
     padding-top: 4%;
 }
 
-#tick-wrapper{
+#tick-wrapper {
     width: 200px;
     height: 200px;
     background-color: #49d049;
@@ -25,11 +25,9 @@
     0% {
         transform: scale(0);
     }
-
     60% {
         transform: scale(1.25, 1.25);
     }
-
     100% {
         transform: scale(1, 1);
     }
@@ -50,4 +48,22 @@
     font-weight: 400;
     margin: 0;
     margin-bottom: 16px;
+}
+
+@media screen and (max-width: 426px) {
+    #main-wrapper {
+        padding: 0 10%;
+        box-sizing: border-box;
+    }
+    #tick-wrapper {
+        margin-top: 50px;
+    }
+    .main-heading {
+        font-size: 24px;
+        text-align: center;
+    }
+    .section-heading {
+        font-size: 18px;
+        text-align: center;
+    }
 }

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     var productId = window.location.search.split('=')[1];
     var currentObj = null;
     //html structure
@@ -55,7 +55,7 @@ $(document).ready(function () {
             image.classList.add("active-image");
         }
 
-        image.onclick = function () {
+        image.onclick = function() {
             $('#product-images img').removeClass("active-image")
             image.classList.add("active-image");
             $('#product-preview').attr('src', url);
@@ -64,7 +64,7 @@ $(document).ready(function () {
         return image;
     }
 
-    $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/' + productId, function (data, status) {
+    $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/' + productId, function(data, status) {
         currentObj = data;
         $('#product-preview').attr('src', data.preview)
         $('#product-title').html(data.name);
@@ -77,9 +77,9 @@ $(document).ready(function () {
         }
     })
 
-    $("#btn-add-to-cart").click(function () {
+    $("#btn-add-to-cart").click(function() {
         $('#btn-add-to-cart').addClass('bigger');
-        setTimeout(function () {
+        setTimeout(function() {
             $('#btn-add-to-cart').removeClass('bigger');
         }, 200)
 
@@ -87,7 +87,7 @@ $(document).ready(function () {
         productList = productList === null || productList === '' ? [] : productList;
         productList = productList.length > 0 ? JSON.parse(productList) : [];
 
-        
+
 
         var foundAtPos = -1;
         for (var i = 0; i < productList.length; i++) {

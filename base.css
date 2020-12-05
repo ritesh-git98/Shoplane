@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -9,16 +9,14 @@ body {
     box-shadow: 0 2px 5px #ccc;
     background-color: white;
     z-index: 10;
-
     position: fixed;
     top: 0;
     left: 0;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    padding: 16px 8%
+    padding: 16px 8%;
 }
 
 #left-menu {
@@ -27,7 +25,7 @@ body {
     align-items: center;
 }
 
-#logo > a {
+#logo>a {
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -44,7 +42,7 @@ body {
     font-weight: 800;
 }
 
-#left-menu > a {
+#left-menu>a {
     text-decoration: none;
     color: black;
     margin-left: 32px;
@@ -58,7 +56,7 @@ body {
     position: relative;
 }
 
-#search-wrapper > i {
+#search-wrapper>i {
     position: absolute;
     color: #999;
     font-size: 18px;
@@ -79,7 +77,7 @@ body {
 
 #right-menu {
     display: inline-flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -99,13 +97,12 @@ body {
     background-color: #009688;
     color: white;
     border-radius: 50%;
-
     position: absolute;
     top: -12px;
     right: -12px;
 }
 
-#cart-wrapper > a {
+#cart-wrapper>a {
     text-decoration: none;
     color: black;
 }
@@ -115,7 +112,7 @@ body {
     cursor: pointer;
 }
 
-#right-menu > img {
+#right-menu>img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -137,21 +134,17 @@ main {
 }
 
 footer {
-   width: 100%;
-   background-color: #1c1b1e; 
-   display: flex;
-   justify-content: center;
-   box-sizing: border-box;
-   padding: 4% 8%;
+    width: 100%;
+    background-color: #1c1b1e;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4% 8%;
 }
 
-footer > div {
+footer>div {
     padding-left: 60px;
     padding-right: 60px;
-}
-
-footer > div:first-of-type {
-    padding-left: 0;
 }
 
 .footer-heading {
@@ -173,8 +166,58 @@ footer > div:first-of-type {
     font-size: 14px;
     opacity: 0.8;
 }
-@media screen and (max-width: 400px) {
-    #topbar{
+
+@media screen and (max-width: 426px) {
+    body {
+        overflow-x: hidden;
+    }
+    main {
+        margin-top: 150px;
+    }
+    #topbar {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #left-menu>a {
+        display: none;
+    }
+    #left-menu {
+        width: 70%;
+    }
+    #right-menu {
+        width: 30%;
+        box-sizing: border-box;
+    }
+    #search-wrapper {
+        margin-top: 4%;
+        width: 100%;
+    }
+    #cart-wrapper {
+        position: absolute;
+        top: 26.5%;
+        left: 70%;
+        margin-right: 15px;
+    }
+    #right-menu>img {
+        position: absolute;
+        top: 15%;
+        left: 81%;
+        width: 45px;
+        height: 45px;
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #edyoda-projects-logo {
+        width: 70px;
+    }
+    footer>div {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
         flex-direction: column;
     }
 }
