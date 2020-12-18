@@ -9,7 +9,7 @@ $(document).ready(function() {
         arrows: false,
         mobileFirst: true,
         responsive: [{
-            breakpoint: 100,
+            breakpoint: 0,
             settings: {
                 arrows: false,
                 centerMode: true,
@@ -17,9 +17,6 @@ $(document).ready(function() {
                 slidesToShow: 1
             }
         }]
-    });
-    $(window).on('resize orientationchange', function() {
-        $('.js-slider').slick('resize');
     });
 
     function createHomePageProductCard(obj) {
