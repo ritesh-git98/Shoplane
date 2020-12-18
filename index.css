@@ -103,9 +103,10 @@
 
 @media screen and (max-width: 426px) {
     .slick-slide {
-        margin: 0 40px;
-        box-sizing: border-box;
-        height: 300px !important;
+        margin: 0 50px;
+        padding: 0;
+        width: 100%;
+        height: 250px !important;
     }
     ul {
         padding: 0;

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.center').slick({
+    $(".center").slick({
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -13,40 +13,39 @@ $(document).ready(function() {
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '10px',
+                centerPadding: "10px",
                 slidesToShow: 1
             }
         }]
     });
 
     function createHomePageProductCard(obj) {
+        var mainDiv = document.createElement("div");
+        mainDiv.classList.add("product-card");
 
-        var mainDiv = document.createElement('div');
-        mainDiv.classList.add('product-card');
+        var productLink = document.createElement("a");
+        productLink.href = "./product.html?id=" + obj.id;
 
-        var productLink = document.createElement('a');
-        productLink.href = './product.html?id=' + obj.id;
-
-        var productImage = document.createElement('img');
-        productImage.classList.add('product-image');
+        var productImage = document.createElement("img");
+        productImage.classList.add("product-image");
         productImage.src = obj.preview;
-        productImage.alt = obj.name + ' Pic';
+        productImage.alt = obj.name + " Pic";
 
         productLink.appendChild(productImage);
 
-        var innerDiv = document.createElement('div');
-        innerDiv.classList.add('product-meta');
+        var innerDiv = document.createElement("div");
+        innerDiv.classList.add("product-meta");
 
-        var productName = document.createElement('h4');
+        var productName = document.createElement("h4");
         var productNameText = document.createTextNode(obj.name);
         productName.appendChild(productNameText);
 
-        var productBrand = document.createElement('h5');
+        var productBrand = document.createElement("h5");
         var productBrandText = document.createTextNode(obj.brand);
         productBrand.appendChild(productBrandText);
 
-        var productPrice = document.createElement('p');
-        var productPriceText = document.createTextNode('Rs ' + obj.price);
+        var productPrice = document.createElement("p");
+        var productPriceText = document.createTextNode("Rs " + obj.price);
         productPrice.appendChild(productPriceText);
 
         innerDiv.appendChild(productName);
@@ -59,15 +58,18 @@ $(document).ready(function() {
         return mainDiv;
     }
 
-    $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product', function(data, status) {
+    $.get("https://5d76bf96515d1a0014085cf9.mockapi.io/product", function(
+        data,
+        status
+    ) {
         var response = data;
 
         for (var i = 0; i < response.length; i++) {
             if (response[i].isAccessory) {
-                $('#accessory-grid').append(createHomePageProductCard(response[i]));
+                $("#accessory-grid").append(createHomePageProductCard(response[i]));
             } else {
-                $('#clothing-grid').append(createHomePageProductCard(response[i]));
+                $("#clothing-grid").append(createHomePageProductCard(response[i]));
             }
         }
-    })
+    });
 });
