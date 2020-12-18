@@ -108,10 +108,10 @@ $(document).ready(function() {
         $.post(
             "https://5d76bf96515d1a0014085cf9.mockapi.io/order",
             dataObj,
-            function() {
-                alert("Order Placed Successfully");
-            }
+            function() {}
+
         );
+        alert("Order Placed Successfully");
         localStorage.setItem("product-list", []);
 
         location.assign("./thankyou.html");
