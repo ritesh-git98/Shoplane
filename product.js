@@ -65,6 +65,7 @@ $(document).ready(function() {
     }
 
     $.get('https://5d76bf96515d1a0014085cf9.mockapi.io/product/' + productId, function(data, status) {
+        $('#overlay').fadeOut();
         currentObj = data;
         $('#product-preview').attr('src', data.preview)
         $('#product-title').html(data.name);

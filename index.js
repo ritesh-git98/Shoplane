@@ -9,14 +9,17 @@ $(document).ready(function() {
         arrows: false,
         mobileFirst: true,
         responsive: [{
-            breakpoint: 400,
+            breakpoint: 100,
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: "10px",
+                centerPadding: "0",
                 slidesToShow: 1
             }
         }]
+    });
+    $(window).on('resize orientationchange', function() {
+        $('.js-slider').slick('resize');
     });
 
     function createHomePageProductCard(obj) {
@@ -63,7 +66,7 @@ $(document).ready(function() {
         status
     ) {
         var response = data;
-
+        $('#overlay').fadeOut();
         for (var i = 0; i < response.length; i++) {
             if (response[i].isAccessory) {
                 $("#accessory-grid").append(createHomePageProductCard(response[i]));

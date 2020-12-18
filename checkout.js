@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    $('#overlay').fadeOut();
     var mainSection = document.getElementById("main-section");
     var mainHeading = document.createElement("h1");
     mainHeading.id = "main-heading";
